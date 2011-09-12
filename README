@@ -4,11 +4,14 @@ Baseline's standard grid is 8 columns. This SASS implementation allows you to sp
 in the _variables.scss file from which to produce nearly any grid implementation and be able to leverage the rest of the goodness in Baseline such
 as its typography, forms, etc.
 
+I removed the concept of "widths" from Baseline and just went with straight "unitx[column]" definitions for simplicity.
+
 Requirements:
 ---------------
 Ruby 1.9.x
 RubyGems
 the 'sass' Ruby gem
+The rest of Baseline, minus the grid of course.
 
 To compile the SASS .scss files into .css, I recommend using the 'compass' Ruby gem, which can be used independently of any operating system,
 web framework or programming language.
