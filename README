@@ -1,0 +1,16 @@
+This project is a SASS (Syntactically Awesome StyleSheets) http://sass-lang.com/ implementation of the Baseline CSS grid: http://baselinecss.com/
+
+Baseline's standard grid is 8 columns. This SASS implementation allows you to specify the number of columns, and the gutter through variables
+in the _variables.scss file from which to produce nearly any grid implementation and be able to leverage the rest of the goodness in Baseline such
+as its typography, forms, etc.
+
+Requirements:
+---------------
+Ruby 1.9.x
+RubyGems
+the 'sass' Ruby gem
+
+To compile the SASS .scss files into .css, I recommend using the 'compass' Ruby gem, which can be used independently of any operating system,
+web framework or programming language.
+
+Enjoy!

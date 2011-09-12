@@ -1,0 +1,27 @@
+.block
+{
+	display: block;
+}
+
+@mixin float($float)
+{
+	float: $float;
+}
+
+@mixin clear($clear)
+{
+	clear: $clear;
+}
+
+@mixin top($top)
+{
+	top: $top;
+}
+
+@mixin font_size($size)
+{
+	font:
+	{
+		size: $size;
+	}
+}
