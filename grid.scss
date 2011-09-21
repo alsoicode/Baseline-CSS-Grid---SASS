@@ -1,5 +1,11 @@
 @import 'variables', 'mixins';
 
+label
+{
+    float: left;
+    margin-left: $gutter;
+}
+
 //calculate grid unit, text-base and select input and table cell widths
 @for $i from 1 through $total_units
 {
@@ -38,19 +44,11 @@
 		{
 			margin-left: 0;
 		}
-		@else
-		{
-			margin-left: $gutter;
-		}
 		
 		@if $i == $total_units
 		{
 			width: $page_width;
 			float: none;
-		}
-		@else
-		{
-			float: left;
 		}
 	}
 	
