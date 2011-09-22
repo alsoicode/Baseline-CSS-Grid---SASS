@@ -12,7 +12,7 @@ label
 	$width: ($unit * $i) + ($gutter * ($i - 1));
 	
 	//columns
-	.unit#{$i}
+	.unitx#{$i}
 	{
 		width: $width;
 		@if $i == $total_units
