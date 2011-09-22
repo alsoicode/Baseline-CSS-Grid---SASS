@@ -84,6 +84,11 @@ label
     display: block;
     float: left;
     margin-left: $gutter;
+    
+    &.first
+    {
+        margin-left: 0;
+    }
 }
 
 .colgroup, .align-left, .clear
