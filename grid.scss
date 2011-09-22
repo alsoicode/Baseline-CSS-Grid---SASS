@@ -79,6 +79,13 @@ label
 }
 
 /* Base column markup */
+.column
+{
+    display: block;
+    float: left;
+    margin-left: $gutter;
+}
+
 .colgroup, .align-left, .clear
 {
 	@extend .block;
