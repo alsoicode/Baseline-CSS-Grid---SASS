@@ -1,5 +1,42 @@
-@import 'variables', 'mixins';
+//Variables for grid
+$gutter: 12px;
+$column_width: 50px;
+$total_columns: 16;
+$page_width: 1007px;
+$text_based_input_padding: 2px;
 
+
+//shared styles and mixins
+.block
+{
+    display: block;
+}
+
+@mixin float($float)
+{
+    float: $float;
+}
+
+@mixin clear($clear)
+{
+    clear: $clear;
+}
+
+@mixin top($top)
+{
+    top: $top;
+}
+
+@mixin font_size($size)
+{
+    font:
+    {
+        size: $size;
+    }
+}
+
+
+//The Grid
 label
 {
     float: left;
