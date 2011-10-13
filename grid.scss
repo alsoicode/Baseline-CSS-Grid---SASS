@@ -101,7 +101,7 @@ label
 
 #page
 {
-    width: $page_width;
+    width: ($page_width - ($gutter * 2));
     position: relative;
     padding: 0 $gutter;
     
