@@ -1,8 +1,8 @@
-//Variables for grid
+//Variables for grid. Replace with your values.
 $gutter: 12px;
 $column_width: 50px;
 $total_columns: 16;
-$page_width: 1007px;
+$page_width_minus_padding: 980px;
 $text_based_input_padding: 2px;
 
 
@@ -46,73 +46,77 @@ label
 //calculate grid unit, text-base and select input and table cell widths
 @for $i from 1 through $total_columns
 {
-    $width: ($column_width * $i) + ($gutter * ($i - 1));
-    
-    //columns
-    .unitx#{$i}
-    {
-        width: $width;
-        @if $i == $total_columns
-        {
-            margin-left: 0 !important;
-        }
-    }
-    
-    //text-based and select form inputs
-    label.unitx#{$i}
-    {
-        input[type="text"],
-        input[type="password"],
-        input[type="select"],
-        input[type="search"],
-        input[type="tel"],
-        input[type="email"],
-        input[type="url"],
-        select
-        {
-            width: ($width - ($text_based_input_padding * 2));
-        }
-    }
-    
-    //form labels
-    label.unitx#{$i}
-    {
-        @if $i == 1 or $i == $total_columns
-        {
-            margin-left: 0;
-        }
-        
-        @if $i == $total_columns
-        {
-            width: $page_width;
-            float: none;
-        }
-    }
-    
-    //table cells
-    th, td
-    {
-        &.unitx#{$i}
+	$width: ($column_width * $i) + ($gutter * ($i - 1));
+	
+	//columns
+	.unitx#{$i}
+	{
+		@if $i == $total_columns
+		{
+			margin-left: 0 !important;
+            width: $page_width_minus_padding;
+		}
+        @else
         {
             width: $width;
         }
-    }
+	}
+	
+	//text-based and select form inputs
+	label.unitx#{$i}
+	{
+		input[type="text"],
+		input[type="password"],
+		input[type="select"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="email"],
+		input[type="url"],
+		select
+		{
+			width: ($width - ($text_based_input_padding * 2));
+		}
+	}
+	
+	//form labels
+	label.unitx#{$i}
+	{
+		@if $i == 1 or $i == $total_columns
+		{
+			margin-left: 0;
+		}
+		
+		@if $i == $total_columns
+		{
+			width: $page_width_minus_padding;
+			float: none;
+		}
+	}
+	
+	//table cells
+	th, td
+	{
+		&.unitx#{$i}
+		{
+			width: $width;
+		}
+	}
 }
 
 #page
 {
-    width: ($page_width - ($gutter * 2));
-    position: relative;
-    padding: 0 $gutter;
-    
-    &:after
-    {
-        @extend .block;
-        @include clear(both);
-        content: ".";
-        height: 0;
-        visibility: hidden;
-    }
+	width: $page_width_minus_padding;
+	position: relative;
+	padding: 0 $gutter;
+	
+	&:after
+	{
+		@extend .block;
+		@include clear(both);
+		content: ".";
+		height: 0;
+		visibility: hidden;
+	}
 }
 
 /* Base column markup */
@@ -130,20 +134,20 @@ label
 
 .colgroup, .align-left, .clear
 {
-    @extend .block;
-    @include float(left);
+	@extend .block;
+	@include float(left);
 }
 
 .first, .no-gutter
 {
-    margin-left: 0;
+	margin-left: 0;
 }
 
-.first          { @include clear(left); }
-.gutter         { margin-left: $gutter; }
-.align-right    { @include float(right); text-align: right; }
+.first			{ @include clear(left); }
+.gutter			{ margin-left: $gutter; }
+.align-right	{ @include float(right); text-align: right; }
 header,
-section         { padding-bottom: 18px; }
+section			{ padding-bottom: 18px; }
 
-.leading        { margin-bottom: 18px; }
-.noleading      { margin-bottom: 0 !important; }        
+.leading		{ margin-bottom: 18px; }
+.noleading		{ margin-bottom: 0 !important; }		
