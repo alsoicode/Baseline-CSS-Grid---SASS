@@ -5,7 +5,7 @@ $total_columns: 12;
 $text_based_input_padding: 2px;
 
 //Calculates page width. Please do not alter.
-$total_page_width: (($column_width * $total_columns) + (($total_columns - 1) * $gutter));
+$total_page_width: (($total_columns * $column_width) + (($total_columns - 1) * $gutter));
 
 //shared styles and mixins
 .block
